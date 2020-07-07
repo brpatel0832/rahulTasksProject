@@ -1,0 +1,6 @@
+framework module Pods_rahulIosTask_rahulIosTaskUITests {
+  umbrella header "Pods-rahulIosTask-rahulIosTaskUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
