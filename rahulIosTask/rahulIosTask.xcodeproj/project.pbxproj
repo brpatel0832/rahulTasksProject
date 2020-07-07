@@ -3,18 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		07E38C792289F41C5A7B65F3 /* Pods_rahulIosTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4452F9476CCC51F13ED074 /* Pods_rahulIosTask.framework */; };
 		54EB1B6424B43FDD00B6B23E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1B6324B43FDD00B6B23E /* AppDelegate.swift */; };
-		54EB1B6824B43FDD00B6B23E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1B6724B43FDD00B6B23E /* ViewController.swift */; };
 		54EB1B6D24B43FDF00B6B23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EB1B6C24B43FDF00B6B23E /* Assets.xcassets */; };
 		54EB1B7024B43FDF00B6B23E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EB1B6E24B43FDF00B6B23E /* LaunchScreen.storyboard */; };
 		54EB1B7B24B43FDF00B6B23E /* rahulIosTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1B7A24B43FDF00B6B23E /* rahulIosTaskTests.swift */; };
 		54EB1B8624B43FDF00B6B23E /* rahulIosTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1B8524B43FDF00B6B23E /* rahulIosTaskUITests.swift */; };
-		54EB1B9424B4416A00B6B23E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EB1B9324B4416A00B6B23E /* Main.storyboard */; };
+		54EB1B9B24B4513F00B6B23E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1B9A24B4513F00B6B23E /* ListViewController.swift */; };
+		54EB1B9C24B4513F00B6B23E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1B9A24B4513F00B6B23E /* ListViewController.swift */; };
+		54EB1B9D24B4513F00B6B23E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1B9A24B4513F00B6B23E /* ListViewController.swift */; };
+		54EB1B9F24B4528200B6B23E /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1B9E24B4528200B6B23E /* ListResponse.swift */; };
+		54EB1BA024B4528200B6B23E /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1B9E24B4528200B6B23E /* ListResponse.swift */; };
+		54EB1BA124B4528200B6B23E /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1B9E24B4528200B6B23E /* ListResponse.swift */; };
+		54EB1BA324B452AA00B6B23E /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BA224B452AA00B6B23E /* ListViewModel.swift */; };
+		54EB1BA424B452AA00B6B23E /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BA224B452AA00B6B23E /* ListViewModel.swift */; };
+		54EB1BA524B452AA00B6B23E /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BA224B452AA00B6B23E /* ListViewModel.swift */; };
+		54EB1BA724B452CF00B6B23E /* ListViewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BA624B452CF00B6B23E /* ListViewWorker.swift */; };
+		54EB1BA824B452CF00B6B23E /* ListViewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BA624B452CF00B6B23E /* ListViewWorker.swift */; };
+		54EB1BA924B452CF00B6B23E /* ListViewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BA624B452CF00B6B23E /* ListViewWorker.swift */; };
+		54EB1BAB24B4530B00B6B23E /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BAA24B4530B00B6B23E /* ListTableViewCell.swift */; };
+		54EB1BAC24B4530B00B6B23E /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BAA24B4530B00B6B23E /* ListTableViewCell.swift */; };
+		54EB1BAD24B4530B00B6B23E /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BAA24B4530B00B6B23E /* ListTableViewCell.swift */; };
+		54EB1BB024B453E000B6B23E /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BAF24B453E000B6B23E /* ImageLoader.swift */; };
+		54EB1BB124B453E000B6B23E /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BAF24B453E000B6B23E /* ImageLoader.swift */; };
+		54EB1BB224B453E000B6B23E /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BAF24B453E000B6B23E /* ImageLoader.swift */; };
+		54EB1BB424B4540E00B6B23E /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BB324B4540E00B6B23E /* URLConstant.swift */; };
+		54EB1BB524B4540E00B6B23E /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BB324B4540E00B6B23E /* URLConstant.swift */; };
+		54EB1BB624B4540E00B6B23E /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BB324B4540E00B6B23E /* URLConstant.swift */; };
+		54EB1BB824B4545200B6B23E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BB724B4545200B6B23E /* WebService.swift */; };
+		54EB1BB924B4545200B6B23E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BB724B4545200B6B23E /* WebService.swift */; };
+		54EB1BBA24B4545200B6B23E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BB724B4545200B6B23E /* WebService.swift */; };
+		54EB1BBC24B464D000B6B23E /* TestListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BBB24B464D000B6B23E /* TestListVC.swift */; };
+		54EB1BBE24B465FA00B6B23E /* ApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB1BBD24B465FA00B6B23E /* ApiTest.swift */; };
 		85FF7972E3EAA69BEE3EBBF6 /* Pods_rahulIosTask_rahulIosTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDFB0C96E5441B0A4E7D7CC /* Pods_rahulIosTask_rahulIosTaskUITests.framework */; };
 		ACEBBE46E42B8D8F2CB2BD11 /* Pods_rahulIosTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0DCA4D52C9CBDE70769FBE /* Pods_rahulIosTaskTests.framework */; };
 /* End PBXBuildFile section */
@@ -40,7 +64,6 @@
 		4FB68F55750BAE6B1DE8347D /* Pods-rahulIosTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rahulIosTaskTests.release.xcconfig"; path = "Target Support Files/Pods-rahulIosTaskTests/Pods-rahulIosTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		54EB1B6024B43FDD00B6B23E /* rahulIosTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rahulIosTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54EB1B6324B43FDD00B6B23E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		54EB1B6724B43FDD00B6B23E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		54EB1B6C24B43FDF00B6B23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54EB1B6F24B43FDF00B6B23E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54EB1B7124B43FDF00B6B23E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,7 +73,16 @@
 		54EB1B8124B43FDF00B6B23E /* rahulIosTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rahulIosTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54EB1B8524B43FDF00B6B23E /* rahulIosTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rahulIosTaskUITests.swift; sourceTree = "<group>"; };
 		54EB1B8724B43FDF00B6B23E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		54EB1B9324B4416A00B6B23E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		54EB1B9A24B4513F00B6B23E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		54EB1B9E24B4528200B6B23E /* ListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
+		54EB1BA224B452AA00B6B23E /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		54EB1BA624B452CF00B6B23E /* ListViewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewWorker.swift; sourceTree = "<group>"; };
+		54EB1BAA24B4530B00B6B23E /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		54EB1BAF24B453E000B6B23E /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		54EB1BB324B4540E00B6B23E /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
+		54EB1BB724B4545200B6B23E /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		54EB1BBB24B464D000B6B23E /* TestListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListVC.swift; sourceTree = "<group>"; };
+		54EB1BBD24B465FA00B6B23E /* ApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTest.swift; sourceTree = "<group>"; };
 		61738FCBEDB3361E0A851FF1 /* Pods-rahulIosTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rahulIosTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-rahulIosTaskTests/Pods-rahulIosTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E4452F9476CCC51F13ED074 /* Pods_rahulIosTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rahulIosTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		847E7132A7CE05E300A908EF /* Pods-rahulIosTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rahulIosTask.debug.xcconfig"; path = "Target Support Files/Pods-rahulIosTask/Pods-rahulIosTask.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,7 +131,6 @@
 				61738FCBEDB3361E0A851FF1 /* Pods-rahulIosTaskTests.debug.xcconfig */,
 				4FB68F55750BAE6B1DE8347D /* Pods-rahulIosTaskTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,11 +159,11 @@
 		54EB1B6224B43FDD00B6B23E /* rahulIosTask */ = {
 			isa = PBXGroup;
 			children = (
-				54EB1B6324B43FDD00B6B23E /* AppDelegate.swift */,
-				54EB1B6724B43FDD00B6B23E /* ViewController.swift */,
+				54EB1BAE24B453A700B6B23E /* Web-API */,
+				54EB1B9524B4508600B6B23E /* AppDelegate */,
+				54EB1B9624B450A100B6B23E /* List */,
 				54EB1B6C24B43FDF00B6B23E /* Assets.xcassets */,
 				54EB1B6E24B43FDF00B6B23E /* LaunchScreen.storyboard */,
-				54EB1B9324B4416A00B6B23E /* Main.storyboard */,
 				54EB1B7124B43FDF00B6B23E /* Info.plist */,
 			);
 			path = rahulIosTask;
@@ -142,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				54EB1B7A24B43FDF00B6B23E /* rahulIosTaskTests.swift */,
+				54EB1BBB24B464D000B6B23E /* TestListVC.swift */,
+				54EB1BBD24B465FA00B6B23E /* ApiTest.swift */,
 				54EB1B7C24B43FDF00B6B23E /* Info.plist */,
 			);
 			path = rahulIosTaskTests;
@@ -154,6 +187,60 @@
 				54EB1B8724B43FDF00B6B23E /* Info.plist */,
 			);
 			path = rahulIosTaskUITests;
+			sourceTree = "<group>";
+		};
+		54EB1B9524B4508600B6B23E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				54EB1B6324B43FDD00B6B23E /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		54EB1B9624B450A100B6B23E /* List */ = {
+			isa = PBXGroup;
+			children = (
+				54EB1B9724B450F700B6B23E /* Model */,
+				54EB1B9924B4510C00B6B23E /* ViewModel */,
+				54EB1B9824B4510100B6B23E /* View */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		54EB1B9724B450F700B6B23E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				54EB1B9E24B4528200B6B23E /* ListResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		54EB1B9824B4510100B6B23E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				54EB1B9A24B4513F00B6B23E /* ListViewController.swift */,
+				54EB1BAA24B4530B00B6B23E /* ListTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		54EB1B9924B4510C00B6B23E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				54EB1BA224B452AA00B6B23E /* ListViewModel.swift */,
+				54EB1BA624B452CF00B6B23E /* ListViewWorker.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		54EB1BAE24B453A700B6B23E /* Web-API */ = {
+			isa = PBXGroup;
+			children = (
+				54EB1BAF24B453E000B6B23E /* ImageLoader.swift */,
+				54EB1BB324B4540E00B6B23E /* URLConstant.swift */,
+				54EB1BB724B4545200B6B23E /* WebService.swift */,
+			);
+			path = "Web-API";
 			sourceTree = "<group>";
 		};
 		772873A325ABBF6A3252870B /* Frameworks */ = {
@@ -275,7 +362,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54EB1B9424B4416A00B6B23E /* Main.storyboard in Resources */,
 				54EB1B7024B43FDF00B6B23E /* LaunchScreen.storyboard in Resources */,
 				54EB1B6D24B43FDF00B6B23E /* Assets.xcassets in Resources */,
 			);
@@ -405,8 +491,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54EB1B6824B43FDD00B6B23E /* ViewController.swift in Sources */,
+				54EB1BB824B4545200B6B23E /* WebService.swift in Sources */,
+				54EB1BB024B453E000B6B23E /* ImageLoader.swift in Sources */,
+				54EB1BB424B4540E00B6B23E /* URLConstant.swift in Sources */,
+				54EB1BA724B452CF00B6B23E /* ListViewWorker.swift in Sources */,
+				54EB1B9F24B4528200B6B23E /* ListResponse.swift in Sources */,
+				54EB1B9B24B4513F00B6B23E /* ListViewController.swift in Sources */,
+				54EB1BA324B452AA00B6B23E /* ListViewModel.swift in Sources */,
 				54EB1B6424B43FDD00B6B23E /* AppDelegate.swift in Sources */,
+				54EB1BAB24B4530B00B6B23E /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +507,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54EB1BB924B4545200B6B23E /* WebService.swift in Sources */,
+				54EB1BB124B453E000B6B23E /* ImageLoader.swift in Sources */,
+				54EB1BB524B4540E00B6B23E /* URLConstant.swift in Sources */,
+				54EB1BBE24B465FA00B6B23E /* ApiTest.swift in Sources */,
+				54EB1BA824B452CF00B6B23E /* ListViewWorker.swift in Sources */,
+				54EB1BBC24B464D000B6B23E /* TestListVC.swift in Sources */,
+				54EB1BA024B4528200B6B23E /* ListResponse.swift in Sources */,
+				54EB1B9C24B4513F00B6B23E /* ListViewController.swift in Sources */,
+				54EB1BA424B452AA00B6B23E /* ListViewModel.swift in Sources */,
 				54EB1B7B24B43FDF00B6B23E /* rahulIosTaskTests.swift in Sources */,
+				54EB1BAC24B4530B00B6B23E /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +525,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54EB1BBA24B4545200B6B23E /* WebService.swift in Sources */,
+				54EB1BB224B453E000B6B23E /* ImageLoader.swift in Sources */,
+				54EB1BB624B4540E00B6B23E /* URLConstant.swift in Sources */,
+				54EB1BA924B452CF00B6B23E /* ListViewWorker.swift in Sources */,
+				54EB1BA124B4528200B6B23E /* ListResponse.swift in Sources */,
+				54EB1B9D24B4513F00B6B23E /* ListViewController.swift in Sources */,
+				54EB1BA524B452AA00B6B23E /* ListViewModel.swift in Sources */,
 				54EB1B8624B43FDF00B6B23E /* rahulIosTaskUITests.swift in Sources */,
+				54EB1BAD24B4530B00B6B23E /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
