@@ -10,6 +10,9 @@ import UIKit
 
 class ListTableViewCell: UITableViewCell {
 
+  private let placeholderImage = "placeholderImage"
+
+  
   // MARK: - Set Cell Data
     var postData:ListResponsesub?{
         willSet(newValue){
@@ -19,14 +22,14 @@ class ListTableViewCell: UITableViewCell {
             if let strUrlUserLogo = newValue?.imageHref?.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
                     let imgUrl = URL(string: strUrlUserLogo) {
                     if strUrlUserLogo == "N/A"{
-                        self.listImageView.image = UIImage(named: "placeholderImage")
+                        self.listImageView.image = UIImage(named: placeholderImage)
                     }
                     else{
                       self.listImageView.loadImageWithUrl(imgUrl)
                     }
                 }
             else{
-              self.listImageView.image = UIImage(named: "placeholderImage")
+              self.listImageView.image = UIImage(named: placeholderImage)
             }
           }
         }
@@ -87,8 +90,10 @@ class ListTableViewCell: UITableViewCell {
         descriptionLabel.topAnchor.constraint(equalTo:self.titleLabel.bottomAnchor, constant:10).isActive = true
         descriptionLabel.leadingAnchor.constraint(equalTo:self.titleLabel.leadingAnchor).isActive = true
         descriptionLabel.trailingAnchor.constraint(equalTo:self.contentView.trailingAnchor, constant:-10).isActive = true
-        descriptionLabel.bottomAnchor.constraint(equalTo:self.contentView.bottomAnchor, constant:10).isActive = true
-        descriptionLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 100).isActive = true
+        descriptionLabel.bottomAnchor.constraint(equalTo:self.contentView.bottomAnchor, constant:1).isActive = true
+      let descriptionLabelHeightConstraint = descriptionLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 90)
+          descriptionLabelHeightConstraint.priority = UILayoutPriority.init(999)
+          descriptionLabelHeightConstraint.isActive = true
 
     }
 

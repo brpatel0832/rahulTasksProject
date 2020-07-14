@@ -11,23 +11,27 @@ import UIKit
 
 class ListViewWorker: NSObject {
 
-    override init() {
-       super.init()
-    }
+  // MARK: - ViewModel for call api and response model
 
-  // MARK: - Call webservice & Decode Return Result
-    func getPost(result: @escaping(Result<ListResponse,RuntimeError>) -> Void){
-           do {
-                 WebService.shared.callJSONWebApi(.GETPOST,withHTTPMethod: .get, forPostParameters: "",tokenInHeader: false) { (response) in
-                   do {
-                       let jsonData = try JSONSerialization.data(withJSONObject: response, options: .prettyPrinted)
-                       let jsonDecoder = JSONDecoder()
-                       let responseModel = try jsonDecoder.decode(ListResponse.self, from: jsonData)
-                       result(.success(responseModel))
-                   } catch {
-                       result(.failure(RuntimeError.init("Data not found")))
-                   }
-               }
-           }
-       }
+  func getPost(onSuccess: @escaping(ListResponse) -> Void, onFail: @escaping(Error?) -> Void, currentView : UIView)
+  {
+      do {
+
+          APIManagerClass.sharedManagerClass.hitAPIWithURL(apiURL: BASEURL,  methodType: .get, dictionaryParameters: nil, isNew: false , isShowProgress: true, viewCurrent: currentView, completionHandlerSuccess: { (responseInJSON) in
+
+            if let tempResponseDict = responseInJSON as? [String:Any],let message = tempResponseDict["message"] as? [String:Any]{
+              do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: message, options: .prettyPrinted)
+                    let jsonDecoder = JSONDecoder()
+                    let responseModel = try jsonDecoder.decode(ListResponse.self, from: jsonData)
+                    onSuccess(responseModel)
+                } catch {
+                  onFail(error)
+                }
+            }
+          }, completionHandlerFailure: { (error) in
+              onFail(error)
+          })
+      }
+  }
 }

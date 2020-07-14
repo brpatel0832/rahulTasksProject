@@ -7,13 +7,14 @@
 //
 
 import UIKit
-import Alamofire
 
 class ListViewController: UIViewController {
 
   // MARK: - Model & Tableview
     var listData = [ListResponsesub]() // model
+    var listTitle = String() // navigation title
     let ListTableView = UITableView() // tableview
+    private let reuseIdentifier = "ListTableViewCell" // tableviewcell
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class ListViewController: UIViewController {
   // MARK: - Navigation
 
   func setUpNavigation() {
-    navigationItem.title = ListViewModel.shared.titleInformation
+    navigationItem.title = listTitle
     self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2431372549, green: 0.7647058824, blue: 0.8392156863, alpha: 1)
     self.navigationController?.navigationBar.isTranslucent = false
     self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
@@ -43,10 +44,8 @@ class ListViewController: UIViewController {
      ListTableView.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor).isActive = true
 
      ListTableView.dataSource = self
-     ListTableView.delegate = self
-     ListTableView.rowHeight = UITableView.automaticDimension
-     ListTableView.estimatedRowHeight = 600
-     ListTableView.register(ListTableViewCell.self, forCellReuseIdentifier: "ListTableViewCell")
+     ListTableView.estimatedRowHeight = 90
+     ListTableView.register(ListTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
      ListTableView.addSubview(refreshControl)
   }
 
@@ -66,22 +65,15 @@ class ListViewController: UIViewController {
   // MARK: - Api Method
 
    func getPostData(isFinished: @escaping(_ status: Bool) -> Void){
-      ListViewModel.shared.getPostInformation { (result) in
-                 switch result{
-                 case .success(true):
-                  self.setUpNavigation()
-                  self.listData = ListViewModel.shared.postInformation
-                  self.ListTableView.reloadData()
-                  self.refreshControl.endRefreshing()
-                  isFinished(true)
-                 case .failure(let error):
-                     print(error)
-                  isFinished(false)
-                 case .success(false):
-                     print("flase")
-                  isFinished(false)
-                 }
-          }
+    ListViewWorker().getPost(onSuccess: { (result) in
+      self.listData = result.rows
+      self.listTitle = result.title ?? ""
+      self.setUpNavigation()
+      self.ListTableView.reloadData()
+      self.refreshControl.endRefreshing()
+    }, onFail: { (error) in
+      print(error ?? "No Error");
+    }, currentView: self.view)
   }
 
   // MARK: - Pull to refrece
@@ -117,7 +109,7 @@ extension ListViewController:UITableViewDataSource{
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath) as! ListTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ListTableViewCell
     cell.postData = listData[indexPath.row]
     cell.layoutIfNeeded()
     return cell
@@ -125,10 +117,3 @@ extension ListViewController:UITableViewDataSource{
 
 }
 
-// MARK: - Tableview Delegate
-
-extension ListViewController:UITableViewDelegate{
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-      return UITableView.automaticDimension
-  }
-}

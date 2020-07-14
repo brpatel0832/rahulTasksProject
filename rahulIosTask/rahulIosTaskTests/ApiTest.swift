@@ -12,6 +12,7 @@ import XCTest
 class ApiTest: XCTestCase {
 
   var apiTest: ListViewController = ListViewController()
+  var apiTestManage: APIManagerClass = APIManagerClass()
 
   func callApiResponse(){
     let e = expectation(description: "Alamofire")
@@ -30,6 +31,30 @@ class ApiTest: XCTestCase {
 
   }
 
+  func testJSONMapping() throws {
+      let bundle = Bundle(for: type(of: self))
+
+      guard let url = bundle.url(forResource: "facts", withExtension: "json") else {
+          XCTFail("Missing file: User.json")
+          return
+      }
+
+      let data = try Data(contentsOf: url)
+      let jsonString = String(decoding: data, as: UTF8.self)
+      let jsonData = Data(jsonString.utf8)
+      let jsonDictionary = apiTestManage.convertToDictionary(text: jsonData)
+
+    let jsonSerialize = try JSONSerialization.data(withJSONObject: jsonDictionary as Any, options: .prettyPrinted)
+    let jsonDecoder = JSONDecoder()
+    let responseModel = try jsonDecoder.decode(ListResponse.self, from: jsonSerialize)
+    //debugPrint("Finished in unit test!!!",responseModel as Any)
+    let responseSubModel = responseModel.rows
+
+    
+    XCTAssertEqual(responseModel.title, "About Canada")
+    XCTAssertEqual(responseSubModel.first?.title, "Beavers")
+    
+  }
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -41,13 +66,6 @@ class ApiTest: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
     }
 
 }
